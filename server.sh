@@ -6,6 +6,8 @@ PWD="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 # ENV vars
 BUILD_TAG=${BUILD_TAG:-latest}
+BACKUP_PATH=${BACKUP_PATH:-"${PWD}/.backup"}
+
 REDIS_NAME="redis"
 REDIS_IMAGE="npm_${REDIS_NAME}:${BUILD_TAG}"
 REDIS_HOME="${PWD}/${REDIS_NAME}"
@@ -14,11 +16,10 @@ VERDACCIO_NAME="verdaccio"
 VERDACCIO_IMAGE="npm_${VERDACCIO_NAME}:${BUILD_TAG}"
 VERDACCIO_HOME="${PWD}/${VERDACCIO_NAME}"
 
-BACKUP_PATH=${BACKUP_PATH:-"${PWD}/.backup"}
-
 
 function help() {
     echo "HELP"
+    echo "Open ./server.sh and try to understand it. I'm too lazy to fill here."
 }
 
 function init() {

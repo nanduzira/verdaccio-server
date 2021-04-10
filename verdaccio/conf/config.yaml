@@ -14,6 +14,8 @@
 storage: /verdaccio/storage/data
 # path to a directory with plugins to include
 plugins: /verdaccio/plugins
+# URL prefix for proxy pass
+# url_prefix: /verdaccio/
 
 web:
   # WebUI is enabled as default, if you want disable it, just uncomment this line
