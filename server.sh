@@ -63,8 +63,8 @@ function start_services() {
 function stop_services() {
 
     # Stop the services
-    docker stop ${VERDACCIO_NAME}
-    docker stop ${REDIS_NAME}
+    docker stop ${VERDACCIO_NAME} || true
+    docker stop ${REDIS_NAME} || true
 }
 
 function logs_services() {
